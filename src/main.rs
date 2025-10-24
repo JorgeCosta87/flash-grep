@@ -6,8 +6,6 @@ use std::process;
 use flashgrep::{search, search_case_insensitive};
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-
     let config = Config::build(env::args()).unwrap_or_else(|err| {
         eprintln!("Problem parsing arguments: {err}");
         process::exit(1);
